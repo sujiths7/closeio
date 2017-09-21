@@ -18,6 +18,9 @@ module Closeio
         get("api_key/#{@api_key}/")
       end
 
+      def availability_status organization_id, options = {}
+        get("user/availability/?organization_id=#{organization_id}")
+      end
     end
   end
 end
